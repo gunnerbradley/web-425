@@ -1,3 +1,8 @@
+//   Title: app.component.html
+//   Author: Gunner Bradley
+//   Date: January 15, 2022
+//   Description: Setting up basic routing in Angular
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
