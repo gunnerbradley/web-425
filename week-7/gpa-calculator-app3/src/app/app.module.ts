@@ -1,10 +1,9 @@
 /**
- * Title: app.module.ts
+ * Title: sign-in.guard.ts
  * Author: Gunner Bradley
  * Date: February 18th 2022
- * Description: app module configuration
+ * Description: imports dependencies for app
  */
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -28,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { CookieService } from 'ngx-cookie-service';
 import { SignInComponent } from './sign-in/sign-in.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +56,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ReactiveFormsModule,
   ],
   providers: [CookieService],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,10 +1,3 @@
-/**
- * Title: app.component.ts
- * Author: Gunner Bradley
- * Date: February 18th 2022
- * Description: app page routes
- */
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
@@ -21,10 +14,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent,
-      },
+        component: HomeComponent
+      }
     ],
-    canActivate: [SignInGuard],
+    canActivate: [SignInGuard]
   },
   {
     path: 'session',
@@ -32,22 +25,22 @@ const routes: Routes = [
     children: [
       {
         path: 'not-found',
-        component: NotFoundComponent,
+        component: NotFoundComponent
       },
       {
         path: 'sign-in',
-        component: SignInComponent,
-      },
-    ],
+        component: SignInComponent
+      }
+    ]
   },
   {
     path: '**',
-    redirectTo: 'session/not-found',
-  },
+    redirectTo: 'session/not-found'
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
